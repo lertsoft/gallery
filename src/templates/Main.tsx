@@ -9,6 +9,7 @@ type IMainProps = {
   children: ReactNode;
 };
 
+// NAVBAR
 const Main = (props: IMainProps) => (
   <div className="w-full px-1 text-gray-700 antialiased">
     {props.meta}
@@ -51,6 +52,7 @@ const Main = (props: IMainProps) => (
 
       <div className="content py-5 text-xl">{props.children}</div>
 
+      {/* FOOTER  */}
       <div className="border-t border-gray-300 py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
         <span role="img" aria-label="Love">
