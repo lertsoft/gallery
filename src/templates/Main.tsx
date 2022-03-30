@@ -38,14 +38,6 @@ const Main = (props: IMainProps) => (
                 </a>
               </Link>
             </li>
-            <li className="mr-6">
-              <a
-                className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                GitHub
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -54,17 +46,11 @@ const Main = (props: IMainProps) => (
 
       {/* FOOTER  */}
       <div className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
+        © Copyright {new Date().getFullYear()} {AppConfig.title}. Created with{' '}
         <span role="img" aria-label="Love">
           ♥
         </span>{' '}
-        by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
-        {/*
-         * PLEASE READ THIS SECTION
-         * We'll really appreciate if you could have a link to our website
-         * The link doesn't need to appear on every pages, one link on one page is enough.
-         * Thank you for your support it'll mean a lot for us.
-         */}
+        by <a href="https://www.ronnycoste.com">Ronny Coste</a>
       </div>
     </div>
   </div>
