@@ -1,10 +1,62 @@
-import { useRouter } from 'next/router';
+// eslint-disable-next-line import/order
+import Image from 'next/image';
+
+// import { useRouter } from 'next/router';
+
+import PhotoAlbum from 'react-photo-album';
 
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
+import nextJsImage from './nextJsImage';
+// import photos from './photos';
+
+const photos = [
+  {
+    src: '/assets/images/BLM2020-2.jpg',
+    alt: 'photo taken',
+    title: 'photo mine',
+    width: 800,
+    height: 600,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    onClick: 'onClick',
+  },
+  {
+    src: '/assets/images/000678220001.JPG',
+    width: 1600,
+    height: 900,
+  },
+  {
+    src: '/assets/images/000678220001.JPG',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: '/assets/images/000678220001.JPG',
+    width: 1600,
+    height: 900,
+  },
+  {
+    src: '/assets/images/000678220001.JPG',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: '/banner.png',
+    width: 1600,
+    height: 900,
+  },
+];
+
+// const App = () => <PhotoAlbum photos={photos} layout="masonry" />;
+
+// <PhotoAlbum layout="columns" photos={photos} renderPhoto={nextJsImage} />;
+
+// export default App;
+
 const Index = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <Main
@@ -15,36 +67,62 @@ const Index = () => {
         />
       }
     >
+      <PhotoAlbum
+        layout="masonry"
+        photos={photos}
+        columns={4}
+        spacing={40}
+        padding={0}
+        renderPhoto={nextJsImage}
+      />
+
       <div className="grid grid-flow-col grid-cols-3 grid-rows-2 gap-8">
         <div>
-          <img src="" alt="" />
+          <Image
+            src="/banner.png"
+            alt=""
+            layout="intrinsic"
+            width={1000}
+            height={1000}
+          />
         </div>
         <div className="col-start-3 grid-flow-col hover:grid-flow-row">
-          <img
-            src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
+          <Image
+            src="/banner.png"
             alt=""
+            layout="intrinsic"
+            width={1000}
+            height={1000}
           />
         </div>
         <div>
-          <img
-            src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
+          <Image
+            src="/banner.png"
             alt=""
+            layout="intrinsic"
+            width={1000}
+            height={1000}
           />
         </div>
         <div>
-          <img
-            src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
+          <Image
+            src="/banner.png"
             alt=""
+            layout="intrinsic"
+            width={1000}
+            height={1000}
           />
         </div>
         <div className="col-span-2 col-start-2 row-start-1">
-          <img
-            src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
+          <Image
+            src="/banner.png"
             alt=""
+            layout="intrinsic"
+            width={1000}
+            height={1000}
           />
         </div>
       </div>
-
       {/* Different formats to display the photos... So future Ronny decides. */}
       <div className="container mx-auto">
         <div className="grid-cols-3 space-y-2 bg-yellow-200 p-20 lg:grid lg:grid-rows-3 lg:gap-3 lg:space-y-0">
@@ -180,70 +258,8 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        <section className="py-8 px-4">
-          <div className="-mx-4 -mb-8 flex flex-wrap">
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/4">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
       </div>
-
-      {/* Aaaannnnnddd we know the drill */}
+      {/* You know me  */}
       <div
         id="carouselExampleCaptions"
         className="carousel slide relative"
@@ -273,16 +289,11 @@ const Index = () => {
         </div>
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">
-            <div
-              className="relative overflow-hidden bg-cover bg-no-repeat"
-              // style="background-position: 50%;"
-            >
-              <img
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(123).jpg"
-                className="block w-full"
-              />
-              <div className="absolute inset-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
-            </div>
+            <img
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+              className="block w-full"
+              alt="..."
+            />
             <div className="carousel-caption absolute hidden text-center md:block">
               <h5 className="text-xl">First slide label</h5>
               <p>
@@ -291,16 +302,11 @@ const Index = () => {
             </div>
           </div>
           <div className="carousel-item relative float-left w-full">
-            <div
-              className="relative overflow-hidden bg-cover bg-no-repeat"
-              // style="background-position: 50%;"
-            >
-              <img
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg"
-                className="block w-full"
-              />
-              <div className="absolute inset-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
-            </div>
+            <img
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+              className="block w-full"
+              alt="..."
+            />
             <div className="carousel-caption absolute hidden text-center md:block">
               <h5 className="text-xl">Second slide label</h5>
               <p>
@@ -309,16 +315,11 @@ const Index = () => {
             </div>
           </div>
           <div className="carousel-item relative float-left w-full">
-            <div
-              className="relative overflow-hidden bg-cover bg-no-repeat"
-              // style="background-position: 50%;"
-            >
-              <img
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg"
-                className="block w-full"
-              />
-              <div className="absolute inset-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
-            </div>
+            <img
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+              className="block w-full"
+              alt="..."
+            />
             <div className="carousel-caption absolute hidden text-center md:block">
               <h5 className="text-xl">Third slide label</h5>
               <p>
