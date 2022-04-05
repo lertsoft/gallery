@@ -26,22 +26,22 @@ const photos = [
     height: 900,
   },
   {
-    src: '/assets/images/000678220001.JPG',
+    src: '/assets/images/000678230010.JPG',
     width: 800,
     height: 600,
   },
   {
-    src: '/assets/images/000678220001.JPG',
+    src: '/assets/images/IMG_0692.JPG',
     width: 1600,
     height: 900,
   },
   {
-    src: '/assets/images/000678220001.JPG',
+    src: '/assets/images/IMG_4328.PNG',
     width: 800,
     height: 600,
   },
   {
-    src: '/banner.png',
+    src: '/assets/images/IMG_4329.PNG',
     width: 1600,
     height: 900,
   },
@@ -66,8 +66,8 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
+          title="Ronny Coste Photo gallery"
+          description="Photo gallery with a selection of photos from the photographer Ronny Coste"
         />
       }
     >

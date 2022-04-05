@@ -24,14 +24,7 @@ const Main = (props: IMainProps) => (
       </div>
       <div>
         <ul className="flex flex-wrap text-lg">
-          <li className="mr-96 text-left">
-            <Link href="/">
-              <a className="border-none text-gray-700 hover:text-gray-900">
-                Coste
-              </a>
-            </Link>
-          </li>
-          <li className="mr-96 text-center">
+          <li className="mr-10 text-center">
             <Link href="/">
               <a className="border-none text-center text-gray-700 hover:text-gray-900">
                 Index

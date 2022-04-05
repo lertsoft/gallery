@@ -1,7 +1,7 @@
 export const AppConfig = {
-  site_name: 'Coste',
-  title: 'Coste',
+  site_name: 'Coste Gallery',
+  title: 'Coste Gallery',
   description:
-    'Photo gallery created with typescript, Tailwindcss, and NEXT.js',
+    'Photo gallery with a selection of photos from the photographer Ronny Coste',
   locale: 'en',
 };
