@@ -24,16 +24,3 @@ a:hover {
   height: 99%;
   margin: 0;
 }
-
-.Login-component {
-    /* The image used */
-    background-image: url(/public/assets/images/nextjs-starter-banner.png);
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}

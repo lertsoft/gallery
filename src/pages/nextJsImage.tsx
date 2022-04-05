@@ -9,7 +9,7 @@ type NextJsImageProps = PhotoProps & {
 
 const nextJsImage = ({ photo, imageProps, wrapperProps }: NextJsImageProps) => {
   const { width, height } = photo;
-  const { src, alt, title, style, sizes, className, onClick } = imageProps;
+  const { src, alt, title, style, sizes, className, id, onClick } = imageProps;
   const { style: wrapperStyle, ...restWrapperProps } = wrapperProps ?? {};
 
   return (
@@ -31,6 +31,7 @@ const nextJsImage = ({ photo, imageProps, wrapperProps }: NextJsImageProps) => {
         height={height}
         className={className}
         onClick={onClick}
+        id={id}
       />
     </div>
   );
