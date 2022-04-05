@@ -5,8 +5,6 @@ import PhotoAlbum from 'react-photo-album';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
-import Carousel, { CarouselItem } from './carousel';
-
 const photos = [
   {
     src: '/assets/images/BLM2020-2.jpg',
@@ -51,15 +49,6 @@ const Index = () => {
   const imageClick = () => {
     // eslint-disable-next-line no-console
     console.log('Click');
-    return (
-      <div id="app">
-        <Carousel>
-          <CarouselItem width={100}>Item 1</CarouselItem>
-          <CarouselItem width={100}>Item 2</CarouselItem>
-          <CarouselItem width={100}>Item 3</CarouselItem>
-        </Carousel>
-      </div>
-    );
   };
 
   return (
@@ -81,102 +70,6 @@ const Index = () => {
           onClick={() => imageClick()}
         />
       </div>
-
-      {/* Another format */}
-      {/* <div className="container mx-auto px-4">
-        <section className="py-8 px-4">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="hidden px-4 md:block md:w-1/2">
-              <div
-                className="h-full w-full rounded bg-cover shadow-md"
-                // style="background-image: url('https://source.unsplash.com/random/1280x720')"
-              ></div>
-            </div>
-            <div className="h-auto px-4 md:w-1/2">
-              <div className="mb-8">
-                <img
-                  className="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 px-4">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="mb-8 px-4 md:mb-0 md:w-1/2">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:mb-0 md:w-1/2">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 pt-8">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-      </div> */}
     </Main>
   );
 };

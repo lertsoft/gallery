@@ -1,7 +1,7 @@
 export const AppConfig = {
-  site_name: 'Coste Gallery',
-  title: 'Coste Gallery',
+  site_name: 'Typescrip Template',
+  title: 'Typescript base template to start any project',
   description:
-    'Photo gallery with a selection of photos from the photographer Ronny Coste',
+    'Typescript based template with NextTS, React, TailwindCSS, lint, Metadata, Folder structure, and basic setup time!',
   locale: 'en',
 };

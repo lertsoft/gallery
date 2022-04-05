@@ -1,6 +1,14 @@
 {
-  "name": "photo_gallery",
+  "name": "typescript_next_template",
+  "description": "A TypeScript starter for Next.js that includes all you need to build amazing projects",
   "version": "1.0.0",
+  "private": true,
+  "author": "Ronny Coste <contact@ronnycoste.com> (@costeronny)",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "typescript"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
