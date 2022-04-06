@@ -1,7 +1,7 @@
 export const AppConfig = {
-  site_name: 'Coste Gallery',
-  title: 'Coste Gallery',
+  site_name: 'Gallery du Coste',
+  title: 'Gallery du Coste',
   description:
-    'Photo gallery with a selection of photos from the photographer Ronny Coste',
+    'tile gallery of the works selected by the photographer Ronny Coste',
   locale: 'en',
 };

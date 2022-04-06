@@ -5,62 +5,113 @@ import PhotoAlbum from 'react-photo-album';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
-import Carousel, { CarouselItem } from './carousel';
+// import Carousel, { CarouselItem } from './carousel';
+import NextJsImage from '../components/nextJsImage';
 
 const photos = [
   {
-    src: '/assets/images/BLM2020-2.jpg',
-    alt: 'photo taken',
-    title: 'photo mine',
+    src: '/assets/images/BLM2020-2.JPG',
+    alt: 'Summer 2020 - BLM',
+    title: 'in protest we trust',
     width: 3200,
     height: 2400,
-    id: 10,
     sizes: '(max-height: 500px) 1000px',
     className: 'photos',
     loader: 'nextJsImage',
     onClick: 'onClick',
   },
   {
-    src: '/assets/images/000678220001.JPG',
-    width: 1600,
-    height: 900,
+    src: '/assets/images/arq_000078040018.JPG',
+    alt: 'Old Manhattan arquitecture',
+    title: 'Police departement late 1800',
+    width: 1080,
+    height: 1350,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
   },
   {
-    src: '/assets/images/000678230010.JPG',
-    width: 800,
-    height: 600,
+    src: '/assets/images/brook_76480009.JPG',
+    alt: 'Brook Interview portrait',
+    title: 'Brook Interview portrait',
+    width: 3200,
+    height: 2400,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
   },
   {
-    src: '/assets/images/IMG_0692.JPG',
-    width: 1600,
-    height: 900,
+    src: '/assets/images/brook_76480010.JPG',
+    width: 1080,
+    height: 1350,
   },
   {
-    src: '/assets/images/IMG_4328.PNG',
-    width: 800,
-    height: 600,
+    src: '/assets/images/cover_000078040032.JPG',
+    alt: 'Album Cover',
+    title: 'Album Cover',
+    width: 1080,
+    height: 1350,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
   },
   {
-    src: '/assets/images/IMG_4329.PNG',
-    width: 1600,
-    height: 900,
+    src: '/assets/images/pa_000678220001.JPG',
+    alt: 'PA rural streets',
+    title: 'PA rural streets',
+    width: 3200,
+    height: 2400,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
+  },
+  {
+    src: '/assets/images/pa_000678230010.JPG',
+    alt: 'PA rural streets',
+    title: 'PA rural streets',
+    width: 3200,
+    height: 2400,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
+  },
+  {
+    src: '/assets/images/portrait_78050009.JPG',
+    alt: 'GoodBye NewYork',
+    title: 'GoodBye NewYork shoot',
+    width: 1080,
+    height: 1350,
+    sizes: '(max-height: 500px) 1000px',
+    className: 'photos',
+    loader: 'nextJsImage',
+    onClick: 'onClick',
+  },
+  {
+    src: '/assets/images/tns_21920005.JPG',
+    width: 1080,
+    height: 1120,
   },
 ];
 
 const Index = () => {
-  const imageClick = () => {
-    // eslint-disable-next-line no-console
-    console.log('Click');
-    return (
-      <div id="app">
-        <Carousel>
-          <CarouselItem width={100}>Item 1</CarouselItem>
-          <CarouselItem width={100}>Item 2</CarouselItem>
-          <CarouselItem width={100}>Item 3</CarouselItem>
-        </Carousel>
-      </div>
-    );
-  };
+  // const imageClick = () => {
+  //   // eslint-disable-next-line no-console
+  //   console.log('Click');
+  //   return (
+  //     <div id="app">
+  //       <Carousel>
+  //         <CarouselItem width={100}>Item 1</CarouselItem>
+  //         <CarouselItem width={100}>Item 2</CarouselItem>
+  //         <CarouselItem width={100}>Item 3</CarouselItem>
+  //       </Carousel>
+  //     </div>
+  //   );
+  // };
 
   return (
     <Main
@@ -78,105 +129,9 @@ const Index = () => {
           columns={3}
           spacing={10}
           padding={20}
-          onClick={() => imageClick()}
+          renderPhoto={NextJsImage}
         />
       </div>
-
-      {/* Another format */}
-      {/* <div className="container mx-auto px-4">
-        <section className="py-8 px-4">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="hidden px-4 md:block md:w-1/2">
-              <div
-                className="h-full w-full rounded bg-cover shadow-md"
-                // style="background-image: url('https://source.unsplash.com/random/1280x720')"
-              ></div>
-            </div>
-            <div className="h-auto px-4 md:w-1/2">
-              <div className="mb-8">
-                <img
-                  className="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 px-4">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="mb-8 px-4 md:mb-0 md:w-1/2">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:mb-0 md:w-1/2">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 pt-8">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-            <div className="mb-8 px-4 md:w-1/3">
-              <img
-                className="rounded shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-      </div> */}
     </Main>
   );
 };

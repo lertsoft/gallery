@@ -20,23 +20,23 @@ const Main = (props: IMainProps) => (
         <div className="text-3xl font-bold text-gray-900">
           {AppConfig.title}
         </div>
-        <div className="text-xl">{AppConfig.description}</div>
+        {/* <div className="text-xl">{AppConfig.description}</div> */}
       </div>
       <div>
         <ul className="flex flex-wrap text-lg">
           <li className="mr-10 text-center">
             <Link href="/">
               <a className="border-none text-center text-gray-700 hover:text-gray-900">
-                Index
+                The Photos
               </a>
             </Link>
           </li>
           <li className="mr-80 text-right">
-            <Link href="/about/">
+            <a href="https://www.ronnycoste.com">
               <a className="border-none text-right text-gray-700 hover:text-gray-900">
-                About
+                The Artist
               </a>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
