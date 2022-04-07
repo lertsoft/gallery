@@ -10,7 +10,7 @@ import NextJsImage from '../components/nextJsImage';
 
 const photos = [
   {
-    src: '/assets/images/BLM2020-2.JPG',
+    src: '/assets/images/BLM2020.JPG',
     alt: 'Summer 2020 - BLM',
     title: 'in protest we trust',
     width: 3200,
