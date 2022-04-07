@@ -94,7 +94,7 @@ const photos = [
   {
     src: '/assets/images/tns_21920005.JPG',
     width: 1080,
-    height: 1120,
+    height: 1080,
   },
 ];
 
@@ -127,9 +127,13 @@ const Index = () => {
           renderPhoto={NextJsImage}
           layout="masonry"
           photos={photos}
-          columns={3}
-          spacing={10}
-          padding={20}
+          columns={(containerWidth) => {
+            if (containerWidth < 450) return 2;
+            if (containerWidth < 800) return 3;
+            return 4;
+          }}
+          spacing={5}
+          padding={10}
         />
       </div>
     </Main>
