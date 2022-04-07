@@ -124,12 +124,12 @@ const Index = () => {
     >
       <div className="inset-y-4 grid gap-10">
         <PhotoAlbum
+          renderPhoto={NextJsImage}
           layout="masonry"
           photos={photos}
           columns={3}
           spacing={10}
           padding={20}
-          renderPhoto={NextJsImage}
         />
       </div>
     </Main>
