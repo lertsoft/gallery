@@ -31,10 +31,17 @@ const Main = (props: IMainProps) => (
               </a>
             </Link>
           </li>
-          <li className="mr-80 text-right">
+          <li className="mr-10 text-right">
             <a href="https://www.ronnycoste.com">
               <a className="border-none text-right text-gray-700 hover:text-gray-900">
                 The Artist
+              </a>
+            </a>
+          </li>
+          <li className="mr-10 text-right">
+            <a href="https://store.ronnycoste.com">
+              <a className="border-none text-right text-gray-700 hover:text-gray-900">
+                The Store
               </a>
             </a>
           </li>
@@ -48,7 +55,8 @@ const Main = (props: IMainProps) => (
 
       {/* FOOTER  */}
       <div className=" border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Created with{' '}
+        © Copyright {new Date().getFullYear()} {AppConfig.title}.<br></br>{' '}
+        Created with{' '}
         <span role="img" aria-label="Love">
           ♥
         </span>{' '}
