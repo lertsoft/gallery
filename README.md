@@ -46,15 +46,13 @@ Built-in feature from Next.js:
 Run the following command on your local environment:
 
 ```
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
 npm install
 ```
 
 Then, you can run locally in development mode with live reload:
 
 ```
-npm run dev
+yarn next dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
@@ -90,8 +88,8 @@ You can easily configure Next.tsx Boilerplate. Please change the following file:
 You can see the results locally in production mode with:
 
 ```
-$ npm run build
-$ npm run start
+$ yarn next build
+$ yarn next start
 ```
 
 The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
