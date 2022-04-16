@@ -329,7 +329,7 @@ const photos = [
     loader: 'nextJsImage',
   },
   {
-    src: '/assets/images/000678220002.JPG',
+    src: '/assets/images/000678220002.jpg',
     alt: 'Summer days',
     title: 'Summer days',
     width: 3200,
@@ -338,7 +338,7 @@ const photos = [
     loader: 'nextJsImage',
   },
   {
-    src: '/assets/images/000678230002.JPG',
+    src: '/assets/images/000678230002.jpg',
     alt: 'NYC Chinatown <3',
     title: 'Chinatown <3',
     width: 3200,
