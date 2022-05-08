@@ -32,7 +32,7 @@ const Main = (props: IMainProps) => (
             </Link>
           </li>
           <li className="mr-10 text-right">
-            <a href="https://www.ronnycoste.com">
+            <a href="https://www.ronnycoste.com/about">
               <a className="border-none text-right text-gray-700 hover:text-gray-900">
                 The Artist
               </a>
