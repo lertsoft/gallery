@@ -4,11 +4,11 @@ import { Main } from '@/templates/Main';
 const Cinematography = () => (
   // return ();
   <Main meta={<Meta title="Cinematography" description="Cinematography" />}>
-    <div className=" text-xl font-bold">
+    <div className=" my-10 text-xl font-bold">
       <h1> Work as Camera Assistant </h1>
     </div>
 
-    <div className=" object-center ">
+    <div className=" my-10 object-center ">
       <iframe
         src="https://www.youtube.com/embed/X52cKIhJTdI"
         // name="myiFrame"
@@ -22,7 +22,7 @@ const Cinematography = () => (
       ></iframe>
     </div>
 
-    <div className="object-center ">
+    <div className=" my-10 object-center ">
       <iframe
         src="https://www.youtube.com/embed/sA_Uk9Tpp8c"
         // title="YouTube video player"
