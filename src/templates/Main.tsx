@@ -31,6 +31,13 @@ const Main = (props: IMainProps) => (
               </a>
             </Link>
           </li>
+          <li className="mr-10 text-center">
+            <Link href="/cinematography">
+              <a className="border-none text-center text-gray-700 hover:text-gray-900">
+                The Cinematography
+              </a>
+            </Link>
+          </li>
           <li className="mr-10 text-right">
             <a href="https://www.ronnycoste.com/about">
               <a className="border-none text-right text-gray-700 hover:text-gray-900">
@@ -38,13 +45,13 @@ const Main = (props: IMainProps) => (
               </a>
             </a>
           </li>
-          <li className="mr-10 text-right">
+          {/* <li className="mr-10 text-right">
             <a href="https://store.ronnycoste.com">
               <a className="border-none text-right text-gray-700 hover:text-gray-900">
                 The Store
               </a>
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       {/* </div> */}
