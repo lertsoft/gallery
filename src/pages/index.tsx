@@ -29,7 +29,7 @@ const photos = [
     loader: 'nextJsImage',
   },
   {
-    src: '/assets/images/76480006.JPG',
+    src: '/assets/images/76480006.PNG',
     alt: 'Pierre Benoit',
     title: 'Pierre Benoit',
     width: 1080,
@@ -49,7 +49,7 @@ const photos = [
     onClick: 'onClick',
   },
   {
-    src: '/assets/images/76480007.JPG',
+    src: '/assets/images/76480007.PNG',
     alt: 'Brook Boughton',
     title: 'Brook Boughton',
     width: 1080,

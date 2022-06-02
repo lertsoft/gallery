@@ -10,6 +10,7 @@
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
+    "typeRoots": ["./src/@types"],
 
     "noImplicitAny": true,
     "noImplicitReturns": true,
