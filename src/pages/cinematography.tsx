@@ -24,6 +24,20 @@ const Cinematography = () => (
 
     <div className=" my-10 object-center ">
       <iframe
+        src="https://www.youtube.com/embed/jzrYKLWRaVU"
+        // name="myiFrame"
+        scrolling="no"
+        className="aspect-video w-full"
+        frameBorder="1"
+        height="400px"
+        width="600px"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    <div className=" my-10 object-center ">
+      <iframe
         src="https://www.youtube.com/embed/sA_Uk9Tpp8c"
         // title="YouTube video player"
         className="aspect-video w-full"
