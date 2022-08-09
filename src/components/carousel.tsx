@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { useSwipeable } from 'react-swipeable';
+// import { useSwipeable } from 'react-swipeable';
 
 export const CarouselItem = ({
   children,
@@ -18,7 +18,8 @@ export const CarouselItem = ({
 
 const Carousel = ({ children }: { children: any }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [paused] = useState(false);
+  // const [paused, setPaused] = useState(false);
 
   const updateIndex = (newIndex: React.SetStateAction<number>) => {
     if (newIndex < 0) {
@@ -46,17 +47,17 @@ const Carousel = ({ children }: { children: any }) => {
     };
   });
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1),
-  });
+  // const handlers = useSwipeable({
+  //   onSwipedLeft: () => updateIndex(activeIndex + 1),
+  //   onSwipedRight: () => updateIndex(activeIndex - 1),
+  // });
 
   return (
     <div
-      {...handlers}
-      id="carousel"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+    // {...handlers}
+    // id="carousel"
+    // onMouseEnter={() => setPaused(true)}
+    // onMouseLeave={() => setPaused(false)}
     >
       <div
         id="inner"

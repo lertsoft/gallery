@@ -18,8 +18,7 @@
     "next-seo": "^5.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-photo-album": "^1.11.1",
-    "react-swipeable": "^6.2.1"
+    "react-photo-album": "^1.16.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",

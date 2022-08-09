@@ -1,11 +1,11 @@
 import React from 'react';
 
+/* eslint-disable import/no-extraneous-dependencies */
 import PhotoAlbum from 'react-photo-album';
 
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
-// import Carousel, { CarouselItem } from './carousel';
 import NextJsImage from '../components/nextJsImage';
 
 const photos = [
@@ -349,20 +349,6 @@ const photos = [
 ];
 
 const Index = () => {
-  // const imageClick = () => {
-  //   // eslint-disable-next-line no-console
-  //   console.log('Click');
-  //   return (
-  //     <div id="app">
-  //       <Carousel>
-  //         <CarouselItem width={100}>Item 1</CarouselItem>
-  //         <CarouselItem width={100}>Item 2</CarouselItem>
-  //         <CarouselItem width={100}>Item 3</CarouselItem>
-  //       </Carousel>
-  //     </div>
-  //   );
-  // };
-
   return (
     <Main
       meta={
