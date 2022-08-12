@@ -1,6 +1,6 @@
-# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript
+# Gallery du Coste
 
-🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, VSCode, Netlify, PostCSS, Tailwind CSS.
+🚀 Gallery built with Next.js, Tailwind CSS and TypeScript ⚡️ 
 
 Clone this project and use it to create your own [Next.js](https://nextjs.org) project.
 
@@ -102,17 +102,6 @@ npm run build-prod
 
 Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
 
-### Deploy to Netlify
-
-Clone this repository on own GitHub account and deploy to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)
-
-### Deploy to Vercel
-
-Deploy this Next JS Boilerplate on Vercel in one click:
-
-[![Deploy with Vercel](https://vercel.com/button)]
 
 ### VSCode information (optional)
 
@@ -125,7 +114,7 @@ Pro tips: if you need a project wide type checking with TypeScript, you can run 
 Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
 
 ### License
-
-Licensed under the MIT License, Copyright © 2022
-
+Software is licensed under the MIT License, Copyright © 2022
 See [LICENSE](LICENSE) for more information.
+
+Images are not to be copied or distributed without my permission.
