@@ -17,30 +17,19 @@ const Meta = (props: IMetaProps) => {
     <>
       <Head>
         <meta charSet="UTF-8" key="charset" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
-          content="width=device-width,initial-scale=1"
-          key="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
+        <meta name="Gallery Du Coste" content="Gallery Du Coste" />
+        <meta name="theme-color" content="#000" />
         <link
           rel="apple-touch-icon"
-          href={`${router.basePath}/favicon.ico`}
+          href={`${router.basePath}/icon-512x512.png`}
           key="apple"
         />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href={`${router.basePath}/favicon.ico`}
-          key="icon32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href={`${router.basePath}/favicon.ico`}
-          key="icon16"
-        />
+        <link rel="manifest" href="/manifest.json" />
         <link
           rel="icon"
           href={`${router.basePath}/favicon.ico`}
