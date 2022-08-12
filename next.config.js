@@ -15,3 +15,15 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
 });
+
+// Generate the service worker
+const withPWA = require('next-pwa');
+
+module.exports = withPWA({
+  // ...before
+  pwa: {
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+  },
+});
