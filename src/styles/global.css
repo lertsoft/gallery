@@ -20,7 +20,46 @@ a:hover {
   @apply my-6;
 }
 
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  overscroll-behavior-y: none;
+  
+
+}
+
+body:has(.hide) {
+  overflow: hidden;
+
+}
+
+:root {
+  color: rgb(255 255 255)
+
+}
+
 .image {
-  height: 99%;
-  margin: 0;
+  width: 40vmin;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.image[data-status="inactive"] {
+  display: none;
+}
+
+.image[data-status="active"] {
+  display: block;
+}
+
+.z {
+  z-index: 100000;
+  /* padding: 0px 1rem;
+  position: fixed;
+  display: flex; */
+  -webkit-box-pack: justify;
+  
 }

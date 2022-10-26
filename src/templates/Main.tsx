@@ -11,68 +11,67 @@ type IMainProps = {
 
 // NAVBAR
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 antialiased">
+  <div className="w-full px-1 antialiased" id="main">
     {props.meta}
 
     <div className="mx-auto max-w-screen-xl">
-      {/* <div className="border-b border-gray-300">  */}
-      <div className="pt-16 pb-8">
+      <div className="z fixed cursor-pointer py-8">
         <Link href="/">
-          <a className="text-3xl font-bold text-gray-900 hover:text-gray-700">
+          <span className="text-3xl font-bold text-gray-100 hover:text-blue-400">
             {AppConfig.title}
             {/* <div className="text-xl">{AppConfig.description}</div> */}
-          </a>
+          </span>
         </Link>
       </div>
 
       {/* Navbar Div below */}
-      <div>
-        <ul className="flex flex-wrap text-lg">
-          <li className="mr-10 text-center">
+      <div className="z p-28 pl-10 flex-wrap fixed cursor-pointer">
+        <ul className="inline-flex  text-lg font-bold">
+          <li className="ml-0 mr-10 ">
             <Link href="/">
-              <a className="border-none text-center text-gray-700 hover:text-gray-900">
-                The Photos
-              </a>
+              <span className="border-none text-white hover:text-blue-400">
+                {' '}
+                The Photos{' '}
+              </span>
             </Link>
           </li>
-          <li className="mr-10 text-center">
-            <Link href="/cinematography">
-              <a className="border-none text-center text-gray-700 hover:text-gray-900">
+          <li className="mr-10 ml-0">
+            <Link
+              href="/cinematography"
+              className="border-none  text-white hover:text-blue-400"
+            >
+              <span className="border-none text-white hover:text-blue-400">
+                {' '}
                 The Films
-              </a>
+              </span>
             </Link>
           </li>
-          <li className="mr-10 text-right">
-            <a href="https://www.ronnycoste.com/about">
-              <a className="border-none text-right text-gray-700 hover:text-gray-900">
-                The Artist
-              </a>
+          <li className="mr-10 ml-0 ">
+            <a
+              href="https://www.ronnycoste.com/about"
+              className="border-none text-white hover:text-blue-400"
+            >
+              The Artist
             </a>
           </li>
-          {/* <li className="mr-10 text-right">
-            <a href="https://store.ronnycoste.com">
-              <a className="border-none text-right text-gray-700 hover:text-gray-900">
-                The Store
-              </a>
-            </a>
-          </li> */}
         </ul>
       </div>
-      {/* ^^^^ NavBar Div ^^^^
-            </div> */}
+      {/* ^^^^ NavBar Div ^^^^ */}
 
       {/* Body of the App */}
 
-      <div className=" inset-full">{props.children}</div>
+      <div className=" h-max pt-32">{props.children}</div>
 
       {/* FOOTER  */}
-      <div className=" border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}.<br></br>{' '}
-        Created with{' '}
-        <span role="img" aria-label="Love">
-          ♥
-        </span>{' '}
-        by <a href="https://www.ronnycoste.com">Ronny Coste</a>
+      <div className="">
+        <div className=" z fixed inset-x-0 bottom-1 border-gray-300 py-8 text-center text-sm">
+          © Copyright {new Date().getFullYear()} {AppConfig.title}.<br></br>{' '}
+          Created with{' '}
+          <span role="img" aria-label="Love">
+            ♥
+          </span>{' '}
+          by <a href="https://www.ronnycoste.com">Ronny Coste</a>
+        </div>
       </div>
     </div>
   </div>

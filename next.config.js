@@ -17,14 +17,14 @@ module.exports = withBundleAnalyzer({
 });
 
 // Generate the service worker
-const withPWA = require('next-pwa');
+// const withPWA = require('next-pwa');
 
-module.exports = withPWA({
-  // ...before
-  pwa: {
-    dest: 'public',
-    register: true,
-    // skipWaiting: true,
-    sw: 'sw.js',
-  },
-});
+// module.exports = withPWA({
+//   // ...before
+//   pwa: {
+//     dest: 'public',
+//     register: true,
+//     // skipWaiting: true,
+//     sw: 'sw.js',
+//   },
+// });

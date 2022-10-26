@@ -1,12 +1,14 @@
+// import TrailingImage from '@/components/trailingImage';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
 const Cinematography = () => (
-  // return ();
   <Main meta={<Meta title="Cinematography" description="Cinematography" />}>
-    <div className=" my-10 text-xl font-bold">
+    {/* <TrailingImage /> */}
+    {/* <div className=" my-10 text-xl font-bold">
       <h1> Work as Camera Assistant </h1>
     </div>
+
     <div className=" my-10 object-center " id="Nataly music video">
       <iframe
         src="https://www.youtube.com/embed/FHrPQUn8md4"
@@ -48,7 +50,6 @@ const Cinematography = () => (
       <iframe
         src="https://www.youtube.com/embed/jzrYKLWRaVU"
         // name="myiFrame"
-        scrolling="no"
         className="aspect-video w-full"
         frameBorder="1"
         height="400px"
@@ -62,7 +63,6 @@ const Cinematography = () => (
       <iframe
         src="https://www.youtube.com/embed/X52cKIhJTdI"
         // name="myiFrame"
-        scrolling="no"
         className="aspect-video w-full"
         frameBorder="1"
         height="400px"
@@ -100,7 +100,7 @@ const Cinematography = () => (
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </div>
+    </div> */}
   </Main>
 );
 

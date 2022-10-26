@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
 const Photos = [
   {
@@ -413,14 +413,14 @@ const Photos = [
   },
 ];
 
-const TrailingImage = () => {
-  const windowRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+const TrailingImage = (): JSX.Element => {
+  // const windowRef = useRef(null);
+  // const [mounted] = useState(false);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  if (typeof window !== 'undefined' && windowRef.current !== null) {
+  if (typeof window !== 'undefined') {
     const images = document.getElementsByClassName('image');
 
     let globalIndex = 0;
@@ -430,6 +430,8 @@ const TrailingImage = () => {
       image.style.left = `${x}px`;
       image.style.top = `${y}px`;
       image.style.zIndex = globalIndex;
+
+      // event.stopPropagation();
 
       image.dataset.status = 'active';
 
@@ -446,6 +448,7 @@ const TrailingImage = () => {
         const tail: any = images[(globalIndex - 5) % images.length];
 
         activate(lead, e.clientX, e.clientY);
+        // e.stopPropagation();
 
         if (tail) tail.dataset.status = 'inactive';
 
@@ -455,12 +458,12 @@ const TrailingImage = () => {
     };
 
     window.onmousemove = (e) => handleOnMove(e);
-    window.ontouchmove = (e) => handleOnMove(e.touches[1]);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  } else null;
+    window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+    // e.stopPropagation();
+  }
 
   return (
-    mounted && (
+    <>
       <div className="">
         {Photos.map(({ src, alt, title, index }) => (
           <img
@@ -476,22 +479,8 @@ const TrailingImage = () => {
             data-status="inactive"
           />
         ))}
-        {/* <div className="inset-y-4 grid gap-10">
-        <PhotoAlbum
-          renderPhoto={NextJsImage}
-          layout="masonry"
-          Photos={Photos}
-          columns={(containerWidth) => {
-            if (containerWidth < 450) return 2;
-            if (containerWidth < 800) return 3;
-            return 4;
-          }}
-          spacing={5}
-          padding={10}
-        />
-      </div> */}
       </div>
-    )
+    </>
   );
 };
 
