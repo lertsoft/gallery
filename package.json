@@ -18,7 +18,7 @@
     "framer-motion": "4.1",
     "next": "^12.1.0",
     "next-pwa": "^5.5.5",
-    "next-seo": "^5.2.0",
+    "next-seo": "^5.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-photo-album": "^1.16.1"
