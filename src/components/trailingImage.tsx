@@ -414,53 +414,55 @@ const Photos = [
 ];
 
 const TrailingImage = (): JSX.Element => {
-  // const windowRef = useRef(null);
-  // const [mounted] = useState(false);
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
+  let images: string | any[] | HTMLCollectionOf<Element>;
 
   if (typeof window !== 'undefined') {
-    const images = document.getElementsByClassName('image');
+    images = document.getElementsByClassName('image');
+  }
 
-    let globalIndex = 0;
-    let last = { x: 0, y: 0 };
+  let globalIndex = 0;
+  let last = { x: 0, y: 0 };
 
-    const activate = (image: any, x: number, y: number) => {
-      image.style.left = `${x}px`;
-      image.style.top = `${y}px`;
-      image.style.zIndex = globalIndex;
+  const activate = (image: any, x: number, y: number) => {
+    image.style.left = `${x}px`;
+    image.style.top = `${y}px`;
+    image.style.zIndex = globalIndex;
 
-      // event.stopPropagation();
+    // e.stopPropagation();
 
-      image.dataset.status = 'active';
+    image.dataset.status = 'active';
 
-      last = { x, y };
-    };
+    last = { x, y };
+  };
 
-    const distanceFromLast = (x: number, y: number) => {
-      return Math.hypot(x - last.x, y - last.y);
-    };
+  const distanceFromLast = (x: number, y: number) => {
+    return Math.hypot(x - last.x, y - last.y);
+  };
 
-    const handleOnMove = (e: any) => {
-      if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 15) {
-        const lead = images[globalIndex % images.length];
-        const tail: any = images[(globalIndex - 5) % images.length];
+  const handleOnMove = (e: any): void => {
+    if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 15) {
+      const lead: any = images[globalIndex % images.length];
+      const tail: any = images[(globalIndex - 5) % images.length];
 
-        activate(lead, e.clientX, e.clientY);
-        // e.stopPropagation();
+      activate(lead, e.clientX, e.clientY);
+      // e.stopPropagation();
 
-        if (tail) tail.dataset.status = 'inactive';
+      if (tail) tail.dataset.status = 'inactive';
 
-        // eslint-disable-next-line no-plusplus
-        globalIndex++;
-      }
-    };
+      // eslint-disable-next-line no-plusplus
+      globalIndex++;
+    }
+  };
 
+  if (typeof window !== 'undefined') {
     window.onmousemove = (e) => handleOnMove(e);
     window.ontouchmove = (e) => handleOnMove(e.touches[0]);
     // e.stopPropagation();
   }
+
+  // function handleOnMove(e: React.TouchEvent<HTMLImageElement>): void {
+  //   throw new Error('Function not implemented.');
+  // }
 
   return (
     <>
@@ -477,6 +479,8 @@ const TrailingImage = (): JSX.Element => {
             className="image"
             data-index={index}
             data-status="inactive"
+            onTouchMove={(e) => handleOnMove(e.touches[0])}
+            onMouseMove={(e) => handleOnMove(e)}
           />
         ))}
       </div>
