@@ -3,6 +3,7 @@
 import React from 'react';
 
 // import TrailingImage from '@/components/trailingImage';
+import TrailingImage from '@/components/trailingImage';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
@@ -17,7 +18,9 @@ const Index = () => {
       }
     >
       <>
-        <div className=" hide">{/* <TrailingImage /> */}</div>
+        <div className=" hide pointer-events-none">
+          <TrailingImage />
+        </div>
       </>
     </Main>
   );

@@ -36,7 +36,7 @@ const Main = (props: IMainProps) => (
             </Link>
           </li>
           <li className="mr-10 ml-0">
-            <Link
+            {/* <Link
               href="/cinematography"
               className="border-none  text-white hover:text-blue-400"
             >
@@ -44,7 +44,7 @@ const Main = (props: IMainProps) => (
                 {' '}
                 The Films
               </span>
-            </Link>
+            </Link> */}
           </li>
           <li className="mr-10 ml-0 ">
             <a
