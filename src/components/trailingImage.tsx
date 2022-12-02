@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-
 import React from 'react';
 
 const Photos = [
@@ -416,81 +415,72 @@ const Photos = [
 
 const TrailingImage = (): JSX.Element => {
   // const windowRef = useRef(null);
-  // const [mounted, setMounted] = useState(false);
+  // const [mounted] = useState(false);
   // useEffect(() => {
   //   setMounted(true);
   // }, []);
 
-  let images: string | any[] | HTMLCollectionOf<Element>;
-
   if (typeof window !== 'undefined') {
-    images = document.getElementsByClassName('image');
-  }
+    const images = document.getElementsByClassName('image');
 
-  let globalIndex = 0;
-  let last = { x: 0, y: 0 };
+    let globalIndex = 0;
+    let last = { x: 0, y: 0 };
 
-  const activate = (image: any, x: number, y: number): any => {
-    image.style.left = `${x}px`;
-    image.style.top = `${y}px`;
-    image.style.zIndex = globalIndex;
+    const activate = (image: any, x: number, y: number) => {
+      image.style.left = `${x}px`;
+      image.style.top = `${y}px`;
+      image.style.zIndex = globalIndex;
 
-    // e.stopPropagation();
+      // event.stopPropagation();
 
-    image.dataset.status = 'active';
+      image.dataset.status = 'active';
 
-    last = { x, y };
-  };
+      last = { x, y };
+    };
 
-  const distanceFromLast = (x: number, y: number) => {
-    return Math.hypot(x - last.x, y - last.y);
-  };
+    const distanceFromLast = (x: number, y: number) => {
+      return Math.hypot(x - last.x, y - last.y);
+    };
 
-  const handleOnMove = (e: any): any => {
-    // e.preventDefault();
-    // e.stopPropagation();
+    const handleOnMove = (e: any) => {
+      if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 15) {
+        const lead = images[globalIndex % images.length];
+        const tail: any = images[(globalIndex - 5) % images.length];
 
-    // const images = document.getElementsByClassName('image');
+        activate(lead, e.clientX, e.clientY);
+        // e.stopPropagation();
 
-    if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 15) {
-      const lead: any = images[globalIndex % images.length];
-      const tail: any = images[(globalIndex - 5) % images.length];
+        if (tail) tail.dataset.status = 'inactive';
 
-      activate(lead, e.clientX, e.clientY);
+        // eslint-disable-next-line no-plusplus
+        globalIndex++;
+      }
+    };
 
-      if (tail) tail.dataset.status = 'inactive';
-
-      // eslint-disable-next-line no-plusplus
-      globalIndex++;
-      // e.stopPropagation();
-    }
-    // console.log('this is the event', e);
-  };
-
-  if (typeof window !== 'undefined') {
     window.onmousemove = (e) => handleOnMove(e);
     window.ontouchmove = (e) => handleOnMove(e.touches[0]);
     // e.stopPropagation();
   }
+
   return (
-    <div className="">
-      {Photos.map(({ src, alt, title, index }) => (
-        <img
-          key={index}
-          src={src}
-          alt={alt}
-          title={title}
-          // sizes=500
-          // width="500px"
-          // height="600px"
-          className="image"
-          data-index={index}
-          data-status="inactive"
-          // onMouseMove={(e) => handleOnMove(e)}
-          // onTouchMove={(e) => handleOnMove(e.touches[0])}
-        />
-      ))}
-    </div>
+    <>
+      <div className="">
+        {Photos.map(({ src, alt, title, index }) => (
+          <img
+            key={index}
+            src={src}
+            alt={alt}
+            title={title}
+            // sizes=500
+            // width="500px"
+            // height="600px"
+            className="image"
+            data-index={index}
+            data-status="inactive"
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
