@@ -31,29 +31,40 @@ const Main = (props: IMainProps) => (
             <Link href="/">
               <span className="border-none text-white hover:text-blue-400">
                 {' '}
-                The Photos{' '}
+                Landscapes{' '}
               </span>
             </Link>
           </li>
           <li className="mr-10 ml-0">
-            {/* <Link
-              href="/cinematography"
+            <Link
+              href="/portraits"
               className="border-none  text-white hover:text-blue-400"
             >
               <span className="border-none text-white hover:text-blue-400">
                 {' '}
-                The Films
+                Portraits
               </span>
-            </Link> */}
+            </Link>
           </li>
-          <li className="mr-10 ml-0 ">
+          <li className="mr-10 ml-0">
+            <Link
+              href="/events"
+              className="border-none  text-white hover:text-blue-400"
+            >
+              <span className="border-none text-white hover:text-blue-400">
+                {' '}
+                Events
+              </span>
+            </Link>
+          </li>
+          {/* <li className="mr-10 ml-0 ">
             <a
               href="https://www.ronnycoste.com/about"
               className="border-none text-white hover:text-blue-400"
             >
               The Artist
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       {/* ^^^^ NavBar Div ^^^^ */}
