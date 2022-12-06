@@ -5,7 +5,7 @@ import { Main } from '@/templates/Main';
 const Cinematography = () => (
   <Main meta={<Meta title="Cinematography" description="Cinematography" />}>
     {/* <TrailingImage /> */}
-    {/* <div className=" my-10 text-xl font-bold">
+    <div className=" my-10 text-xl font-bold">
       <h1> Work as Camera Assistant </h1>
     </div>
 
@@ -100,7 +100,7 @@ const Cinematography = () => (
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </div> */}
+    </div>
   </Main>
 );
 
