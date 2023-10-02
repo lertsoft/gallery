@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.26",
+    "@types/styled-components": "^5.1.27",
     "framer-motion": "4.1",
     "next": "^12.1.0",
     "next-pwa": "^5.5.5",
