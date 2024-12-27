@@ -1,8 +1,8 @@
-import React, { useState, useEffect, JSX, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { Events } from '@/data/events';
 
-const TrailingImage = (): JSX.Element => {
+const TrailingImage = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [images, setImages] = useState<HTMLCollectionOf<Element> | null>(null);
   const [globalIndex, setGlobalIndex] = useState(0);
